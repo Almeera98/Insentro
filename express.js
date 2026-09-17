@@ -17,7 +17,7 @@ app.get('/services', (req, res) => {
   res.sendFile(path.join(__dirname, 'services.html'));
 });
 
-// 3. Portfolio Page Route
+// 3. Portfolio page Route
 app.get('/portfolio', (req, res) => {
   res.sendFile(path.join(__dirname, 'portfolio.html'));
 });

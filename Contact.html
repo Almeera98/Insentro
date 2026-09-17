@@ -11,27 +11,40 @@
 
     <title>Document</title>
 </head>
-<body class="bg-gray-900 text-white font-sans">
- <header class="border-b border-gray-800/80 bg-[#0B0F17]/80 backdrop-blur-md sticky top-0 z-50">
+<body class="bg-[#030712] text-gray-100 font-sans selection:bg-cyan-400 selection:text-black">
+<header class="border-b border-gray-800/80 bg-[#0b1329]/90 backdrop-blur-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-      <!-- Insentro Logo -->
-        <a class="text-2xl font-black tracking-wider text-white">
-            INSENTRO<span class="text-cyan-400">.</span>
-
-     
-      <!-- Har page ke Header me Navbar Links is tarah hone chahiye -->
-<nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center text-white gap-4 navbar">
-      <a class="mr-5 hover:text-gray-900" href="index.html">Home</a>
-       <a class="mr-5 hover:text-gray-900" href="Services.html">Services</a>
-      <a class="mr-5 hover:text-gray-900" href="Portfolio.html">Portfolio</a>
-      <a class="mr-5 hover:text-gray-900" href="Pricing.html">Pricing</a>
-      <a class="mr-5 hover:text-gray-900" href="Contact.html">Contact</a>
-    </nav>
-
-      <!-- CTA Button -->
-      <a  class="hidden md:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-gray-900 bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition duration-300">
-        Start A Project
+      <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+        INSENTRO<span class="text-cyan-400">.</span>
       </a>
+
+      <!-- Desktop Navbar -->
+      <nav class="hidden md:flex items-center text-sm font-medium gap-8">
+        <a class="text-cyan-400 font-bold" href="index.html">Home</a>
+        <a class="hover:text-cyan-400 transition" href="Services.html">Services</a>
+        <a class="hover:text-cyan-400 transition" href="Portfolio.html">Portfolio</a>
+        <a class="hover:text-cyan-400 transition" href="Pricing.html">Pricing</a>
+        <a class="hover:text-cyan-400 transition" href="Contact.html">Contact</a>
+      </nav>
+
+      <!-- CTA & Mobile Toggle Button -->
+      <div class="flex items-center gap-4">
+        <a href="Contact.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-black bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition duration-300">
+          Start A Project
+        </a>
+        <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-white text-2xl focus:outline-none">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-[#0b1329] border-b border-gray-800 px-6 py-4 space-y-3">
+      <a class="block text-cyan-400 font-bold py-1" href="index.html">Home</a>
+      <a class="block hover:text-cyan-400 py-1" href="Services.html">Services</a>
+      <a class="block hover:text-cyan-400 py-1" href="Portfolio.html">Portfolio</a>
+      <a class="block hover:text-cyan-400 py-1" href="Pricing.html">Pricing</a>
+      <a class="block hover:text-cyan-400 py-1" href="Contact.html">Contact</a>
     </div>
   </header>
 
@@ -43,7 +56,7 @@
     <section class="text-black body-font relative">
   <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
     <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
-      <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+      <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57835.08917645585!2d67.03004985825056!3d25.044488068977916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb343c1727792b3%3A0x774c5ea8a254dbbf!2sSurjani%20Town%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1789510681865!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
       <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
         <div class="lg:w-1/2 px-6">
           <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
@@ -80,5 +93,11 @@
  <footer class="border-t border-gray-900 py-8 text-center text-xs text-gray-500">
     <p><i class="fa-solid fa-copyright"></i> 2026 INSENTRO. All Rights Reserved.</p>
   </footer>
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
