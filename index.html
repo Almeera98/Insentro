@@ -11,40 +11,102 @@
 
   <!-- HEADER / NAVBAR -->
   <header class="border-b border-gray-800/80 bg-[#0b1329]/90 backdrop-blur-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-black tracking-wider text-white">
-        INSENTRO<span class="text-cyan-400">.</span>
-      </a>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+    <!-- Logo -->
+    <a href="index.html" class="text-2xl font-black tracking-wider text-white">
+      INSENTRO<span class="text-cyan-400">.</span>
+    </a>
 
-      <!-- Desktop Navbar -->
-      <nav class="hidden md:flex items-center text-sm font-medium gap-8">
-        <a class="text-cyan-400 font-bold" href="index.html">Home</a>
-        <a class="hover:text-cyan-400 transition" href="Services.html">Services</a>
-        <a class="hover:text-cyan-400 transition" href="Portfolio.html">Portfolio</a>
-        <a class="hover:text-cyan-400 transition" href="Pricing.html">Pricing</a>
-        <a class="hover:text-cyan-400 transition" href="Contact.html">Contact</a>
-      </nav>
+    <!-- Desktop Navbar -->
+    <nav class="hidden md:flex items-center text-sm font-medium gap-8">
+      <a class="text-cyan-400 font-bold" href="index.html">Home</a>
 
-      <!-- CTA & Mobile Toggle Button -->
-      <div class="flex items-center gap-4">
-        <a href="Contact.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-black bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition duration-300">
-          Start A Project
+      <!-- SERVICES DROPDOWN -->
+      <div class="relative group">
+        <a href="Services.html" class="inline-flex items-center gap-1.5 hover:text-cyan-400 py-6 transition">
+          Services
+          <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-cyan-400 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </a>
-        <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-white text-2xl focus:outline-none">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-[#0d1733] border border-gray-800 rounded-xl p-2 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="Services.html#web-dev" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">Web Development</div>
+            <div class="text-[11px] text-gray-400">Responsive & Custom Sites</div>
+          </a>
+          <a href="Services.html#branding" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">Branding & Logo</div>
+            <div class="text-[11px] text-gray-400">Vector layouts & kits</div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-[#0b1329] border-b border-gray-800 px-6 py-4 space-y-3">
-      <a class="block text-cyan-400 font-bold py-1" href="index.html">Home</a>
-      <a class="block hover:text-cyan-400 py-1" href="Services.html">Services</a>
-      <a class="block hover:text-cyan-400 py-1" href="Portfolio.html">Portfolio</a>
-      <a class="block hover:text-cyan-400 py-1" href="Pricing.html">Pricing</a>
-      <a class="block hover:text-cyan-400 py-1" href="Contact.html">Contact</a>
+      <!-- PORTFOLIO DROPDOWN -->
+      <div class="relative group">
+        <a href="Portfolio.html" class="inline-flex items-center gap-1.5 hover:text-cyan-400 py-6 transition">
+          Portfolio
+          <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-cyan-400 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-[#0d1733] border border-gray-800 rounded-xl p-2 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="Portfolio.html#web-projects" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">Web Projects</div>
+            <div class="text-[11px] text-gray-400">Recent Web Client Work</div>
+          </a>
+          <a href="Portfolio.html#designs" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">UI/UX Layouts</div>
+            <div class="text-[11px] text-gray-400">Figma & Graphic Assets</div>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRICING DROPDOWN -->
+      <div class="relative group">
+        <a href="Pricing.html" class="inline-flex items-center gap-1.5 hover:text-cyan-400 py-6 transition">
+          Pricing
+          <svg class="w-3.5 h-3.5 text-gray-400 group-hover:text-cyan-400 group-hover:rotate-180 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </a>
+        <!-- Dropdown Menu -->
+        <div class="absolute left-0 top-full hidden group-hover:block w-56 bg-[#0d1733] border border-gray-800 rounded-xl p-2 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <a href="Pricing.html#web-packages" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">Web Packages</div>
+            <div class="text-[11px] text-gray-400">Starter & Custom Plans</div>
+          </a>
+          <a href="Pricing.html#logo-packages" class="block px-4 py-2.5 rounded-lg hover:bg-cyan-500/10 text-xs text-gray-200 hover:text-cyan-400 transition">
+            <div class="font-bold text-sm text-white">Logo Packages</div>
+            <div class="text-[11px] text-gray-400">Branding & Vector Kits</div>
+          </a>
+        </div>
+      </div>
+
+      <a class="hover:text-cyan-400 transition" href="Contact.html">Contact</a>
+    </nav>
+
+    <!-- CTA & Mobile Toggle Button -->
+    <div class="flex items-center gap-4">
+      <a href="Contact.html" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase text-black bg-cyan-400 hover:bg-cyan-300 shadow-lg shadow-cyan-500/20 transition duration-300">
+        Start A Project
+      </a>
+      <button id="menu-btn" onclick="toggleMobileMenu()" class="md:hidden text-white text-2xl focus:outline-none">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-  </header>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-[#0b1329] border-b border-gray-800 px-6 py-4 space-y-3">
+    <a class="block text-cyan-400 font-bold py-1" href="index.html">Home</a>
+    <a class="block hover:text-cyan-400 py-1" href="Services.html">Services</a>
+    <a class="block hover:text-cyan-400 py-1" href="Portfolio.html">Portfolio</a>
+    <a class="block hover:text-cyan-400 py-1" href="Pricing.html">Pricing</a>
+    <a class="block hover:text-cyan-400 py-1" href="Contact.html">Contact</a>
+  </div>
+</header>
 
   <!-- HERO SECTION -->
   <section class="py-16 md:py-24 px-6 max-w-7xl mx-auto text-center">
@@ -68,41 +130,55 @@
     </div>
   </section>
 
-  <!-- HOMEPAGE EXTRA CONTENT SECTION -->
-  <section class="py-12 md:py-16 bg-[#01040a] border-y border-gray-800/80">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 bg-[#0b1329]/60 rounded-2xl border border-gray-800">
-          <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 text-xl font-bold mb-4">
-            <i class="fa-solid fa-code"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Modern Tech Stack</h3>
-          <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-            Clean HTML, Tailwind CSS, JavaScript, and Node/Express architectures for super-fast website performance.
-          </p>
-        </div>
-        <div class="p-6 bg-[#0b1329]/60 rounded-2xl border border-gray-800">
-          <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 text-xl font-bold mb-4">
-            <i class="fa-solid fa-pen-nib"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Vector Logo Concepts</h3>
-          <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-            Custom vector logos crafted to establish brand credibility across digital and print media.
-          </p>
-        </div>
-        <div class="p-6 bg-[#0b1329]/60 rounded-2xl border border-gray-800">
-          <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 text-xl font-bold mb-4">
-            <i class="fa-solid fa-mobile-screen-button"></i>
-          </div>
-          <h3 class="text-lg font-bold text-white mb-2">Mobile First Layouts</h3>
-          <p class="text-gray-400 text-xs md:text-sm leading-relaxed">
-            100% fluid layouts engineered to adapt dynamically to smartphones, tablets, and desktop displays.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  \<!-- HERO & 2 CLEAN CARDS SECTION -->
+<section class="min-h-screen bg-[#080C14] text-white pt-28 pb-16 px-4 sm:px-6 lg:px-12 flex flex-col justify-center items-center">
+  
+  <!-- Top Hero Header -->
+  <div class="max-w-3xl mx-auto text-center space-y-4 mb-12">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+      Empowering Digital Brands with <span class="text-[#00E5FF]">Next-Gen Solutions</span>
+    </h1>
+    <p class="text-gray-400 text-sm sm:text-base">
+      Engineered for speed, conversion, and brand presence.
+    </p>
+  </div>
 
+  <!-- Responsive 2 Cards Grid (Without Icons) -->
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 w-full">
+    
+    <!-- CARD 1: SERVICE CARD -->
+    <div class="bg-[#0D1424] border border-gray-800 hover:border-[#00E5FF]/60 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 shadow-2xl flex flex-col justify-between">
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-3">Our Services</h2>
+        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+          High-converting digital solutions customized to scale your online presence with clean code and modern web design.
+        </p>
+      </div>
+
+      <!-- Service Interactive Button -->
+      <a href="Services.html" class="w-full bg-[#00E5FF]/10 hover:bg-[#00E5FF] text-[#00E5FF] hover:text-black font-semibold text-center py-3 rounded-xl transition-all duration-300 border border-[#00E5FF]/30 block">
+        Explore Services &rarr;
+      </a>
+    </div>
+
+    <!-- CARD 2: PRICING CARD -->
+    <div class="bg-[#0D1424] border border-gray-800 hover:border-[#00E5FF]/60 rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:-translate-y-2 shadow-2xl flex flex-col justify-between">
+      <div>
+        <h2 class="text-2xl font-bold text-white mb-3">Flexible Pricing</h2>
+        <p class="text-gray-400 text-sm leading-relaxed mb-8">
+          Check out transparent and affordable pricing packages tailored specifically for web development and logo design.
+        </p>
+      </div>
+
+      <!-- Pricing Interactive Button -->
+      <a href="Pricing.html" class="w-full bg-[#00E5FF] hover:bg-[#00b3cc] text-black font-semibold text-center py-3 rounded-xl transition-all duration-300 shadow-lg shadow-[#00E5FF]/20 block">
+        View Web Pricing &rarr;
+      </a>
+    </div>
+
+  </div>
+
+</section>
   <!-- FOOTER -->
   <footer class="border-t border-gray-900 py-8 text-center text-xs text-gray-500">
     <p><i class="fa-solid fa-copyright"></i> 2026 INSENTRO. All Rights Reserved.</p>
