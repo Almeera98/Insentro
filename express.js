@@ -9,7 +9,6 @@ const app = express();
 const PORT = 3000;
 
 
-
 // Same folder ki static files (CSS, Images, JS) serve karne ke liye
 
 app.use(express.static(__dirname));
